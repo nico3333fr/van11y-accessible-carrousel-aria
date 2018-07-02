@@ -3,7 +3,7 @@
   "description": "ES2015 accessible carrousel system, using ARIA (compatible IE9+ when transpiled)",
   "homepage": "https://van11y.net/accessible-carrousel/",
   "main": "van11y-accessible-carrousel-aria.es6.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "Accessibility",
     "ARIA",
