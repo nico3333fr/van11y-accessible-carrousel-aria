@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+ <meta charset="utf-8" />
+ <title>Démos : Carrousel accessible avec ARIA et en Vanilla Javascript - Van11y </title>
+
+<link href="./styles.css" rel="stylesheet" media="all" />
+
+<meta name="description" content="Ce script va transformer une suite de Hx/contenus en un carrousel accessible, en utilisant ARIA" />
+<meta name="keywords" content="collection, accessibilité, carrousel, scripts, projets, onglets, info-bulle, customisable" />
+
+<meta property="og:type" content="website" />
+<!-- Open Graph Meta Data -->
+<meta property="og:title" content="Démos : Carrousel accessible avec ARIA et en Vanilla Javascript - Van11y" />
+<meta property="og:description" content="Ce script va transformer une suite de Hx/contenus en un carrousel accessible, en utilisant ARIA" />
+<meta property="og:image" content="https://van11y.net/apple-touch-icon_1471815930.png" />
+<meta property="og:url" content="https://van11y.net/fr/carrousel-accessible/" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://van11y.net/fr/carrousel-accessible/" />
+<meta name="twitter:title" content="Démos : Panneaux dépliants accessibles (show/hide) avec ARIA et en Vanilla Javascript - Van11y" />
+<meta name="twitter:description" content="Ce script va transformer une suite de Hx/contenus en un carrousel accessible, en utilisant ARIA" />
+<meta name="twitter:image" content="https://van11y.net/apple-touch-icon_1471815930.png" />
+<meta name="twitter:site" content="Van11y" />
+<meta name="twitter:creator" content="Van11y" />
+
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+<body role="document">
+
+
+<div id="page" class="mw960e" role="main">
+
+ <br>
+ <div class="aligncenter">
+ 	<a href="https://van11y.net/fr/" class="logo-link"><img src="https://van11y.net/layout/images/logo-van11y.svg" alt="Retour à la page d’accueil" width="267" height="90" class="logo" /></a>
+ </div>
+ <br>
+
+ <h1 class="aligncenter">Démos&#160;: Carrousel accessible avec <abbr title="Accessible Rich Internet Applications" lang="en" xml:lang="en">ARIA</abbr>, en Vanilla <abbr title="JavaScript" lang="en" xml:lang="en">JS</abbr></h1>
+
+ <div class="js-carrousel  relative pb1">
+      <div class="js-carrousel__container mod--hidden mb1"
+              data-carrousel-btn-previous-img="./left.svg"
+              data-carrousel-btn-next-img="./right.svg"
+              data-carrousel-btn-previous-text="Voir le contenu précédent"
+              data-carrousel-btn-next-text="Voir le contenu suivant"
+              data-carrousel-prefix-class="news"
+              data-carrousel-span-text-class="invisible"
+              data-carrousel-transition="slide"
+              data-carrousel-existing-hx="h2">
+
+        <div class="js-carrousel__content">
+        	 <h2>Première zone de contenu</h2>
+        	 <p>Ce premier exemple de <a href="https://van11y.net/fr/carrousel-accessible/" class="link">carrousel accessible</a> a une animation de <em lang="en" xml:lang="en">slide</em>. Testez-la&#8239;!</p>
+        	</div><!--
+    --><div class="js-carrousel__content">
+          <h2>Deuxième zone de contenu</h2>
+        	 <p>Il est possible de naviguer avec <kbd>Tab</kbd>. Les contrôles ci-dessous se naviguent avec les flèches <kbd>gauche</kbd> et <kbd>droite</kbd>.</p>
+        	</div><!--
+    --><div class="js-carrousel__content">
+        	 <h2>Troisième zone de contenu</h2>
+        	 <p>Cet exemple comprend des titres <code>h2</code> (qui seront repris pour les boutons ci-dessous), c’est donc un parfait exemple.</p>
+        	</div><!--
+      --></div>
+
+    </div>
+
+
+    <br /><hr /><br />
+
+
+    <div class="js-carrousel  relative pb1">
+        <div class="js-carrousel__container  mod--hidden mb1"
+                data-carrousel-btn-previous-img="./left.svg"
+                data-carrousel-btn-next-img="./right.svg"
+                data-carrousel-btn-previous-text="Voir le contenu précédent"
+                data-carrousel-btn-next-text="Voir le contenu suivant"
+                data-carrousel-prefix-class="news"
+                data-carrousel-transition="fade"
+                data-carrousel-hx="h2"
+                data-carrousel-span-text="Panneau">
+
+         <div class="js-carrousel__content">
+                <p>Cet exemple a une transition différente (un fondu, spécifié par <code>data-carrousel-transition="fade"</code>).</p>
+              </div><!--
+      --><div class="js-carrousel__content">
+               <p>Dans ce cas, le contenu n’a pas de titres, ils seront générés par le script via <code>data-carrousel-hx="h2"</code>.</p>
+              </div><!--
+      --><div class="js-carrousel__content">
+               <p>Il est donc possible d’avoir des designs et des transitions totalement séparés.</p>
+              </div><!--
+        --></div>
+
+      </div>
+
+
+      <br /><hr /><br />
+
+      <h2>Autre exemple</h2>
+
+      <div class="js-carrousel  relative pb1">
+            <div class="js-carrousel__container  mod--hidden mb1"
+                    data-carrousel-btn-previous-img="./left.svg"
+                    data-carrousel-btn-next-img="./right.svg"
+                    data-carrousel-btn-previous-text="Voir le contenu précédent"
+                    data-carrousel-btn-next-text="Voir le contenu suivant"
+                    data-carrousel-prefix-class="news"
+                    data-carrousel-transition="none"
+                    data-carrousel-existing-hx="h3"
+                    data-carrousel-active-slide="2">
+
+             <div class="js-carrousel__content">
+                    <h3>Un premier contenu</h3>
+                    <p>Ok, je n’ai pas de transition, mais et moi&#8239;?</p>
+                  </div><!--
+          --><div class="js-carrousel__content">
+                <h3>Un contenu affiché de suite</h3>
+                <p>Là on arrive directement sur le deuxième contenu, grâce à <code>data-carrousel-active-slide="2"</code>.</p>
+             </div><!--
+          --><div class="js-carrousel__content">
+                <h3>Un autre contenu</h3>
+                <p>Bin et moi aussi&#8239;?</p>
+                  </div><!--
+            --></div>
+
+          </div>
+
+          <br /><hr />
+
+<div class="footer" role="contentinfo"><br>Ces démos sont des exemples de <a href="https://van11y.net/fr/carrousel-accessible/" class="link">carrousels accessibles utilisant <abbr title="Accessible Rich Internet Applications" lang="en" xml:lang="en">ARIA</abbr></a>.<br><br></div>
+
+</div>
+<script src="../dist/van11y-accessible-carrousel-aria.min.js"></script>
+</body>
+</html>

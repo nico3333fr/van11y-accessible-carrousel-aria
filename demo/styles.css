@@ -1,0 +1,355 @@
+html {
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See https://connect.microsoft.com/IE/feedback/details/816709/ */
+  /* Thanks to @guardian, @victorbritopro, @eQRoeil & Knacss */
+  font-size: calc(1em * 0.625);
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: #fff;
+  color: #444;
+  font-family: 'roboto', Arial, sans-serif;
+  font-size: 1.8em; /* equiv 18px */
+  line-height: 1.5; /* to update if needed */
+}
+
+
+@font-face {
+    /*font-family: 'robotoregular';*/
+    font-family: 'roboto';
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.eot');
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.eot?#iefix') format('embedded-opentype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.woff2') format('woff2'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.woff') format('woff'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.ttf') format('truetype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Regular-webfont_20180126.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /*font-family: 'robotobold';*/
+    font-family: 'roboto';
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.eot');
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.eot?#iefix') format('embedded-opentype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.woff2') format('woff2'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.woff') format('woff'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.ttf') format('truetype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Bold-webfont_20180126.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    /*font-family: 'robotoitalic';*/
+    font-family: 'roboto';
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.eot');
+    src: url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.eot?#iefix') format('embedded-opentype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.woff2') format('woff2'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.woff') format('woff'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.ttf') format('truetype'),
+         url('https://van11y.net/layout/css/fonts/Roboto-Italic-webfont_20180126.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.mw960e {
+  max-width: 53.333333em;
+  margin: 0 auto;
+}
+.aligncenter {
+  text-align: center;
+}
+h1,
+.h1 {
+  display: block;
+  font-size: 1.55556em; /* equiv 28px */
+  line-height: 1.92857;
+  margin: 0 0 .96429em 0;
+  font-weight: normal;
+}
+h2,
+.h2 {
+  display: block;
+  font-size: 1.33333em; /* equiv 24px */
+  line-height: 1.125;
+  margin: 0 0 1.125em 0;
+  font-weight: normal;
+}
+h3,
+.h3 {
+  display: block;
+  font-size: 1.11111em; /* equiv 20px */
+  line-height: 1.35;
+  margin: 0 0 1.35em 0;
+  font-weight: normal;
+}
+
+.link {
+  color: #4d287f;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px solid #4d287f;
+}
+/* remember focus */
+.link:focus,
+.link:hover,
+.link:active {
+  color: #4d287f;
+  border-bottom: 1px solid #4d287f;
+  outline: 2px dotted;
+}
+/* avoid border on images in links + fix border image IE */
+.link:link img,
+.link:visited img,
+img {
+  border-style: none;
+}
+/* external links */
+.link[href^="http://"]:after,
+.link[href^="https://"]:after {
+  content:"\202f\2197";
+  speak: none;
+  border-bottom: 1px solid #fff;
+
+}
+
+.logo-link,
+.logo-link:focus,
+.logo-link:hover,
+.logo-link:active,
+.link.noimg[href^="http://"]:after,
+.link.noimg[href^="https://"]:after {
+  border-bottom: 0;
+}
+
+.link.noimg[href^="http://"]:after,
+.link.noimg[href^="https://"]:after {
+  content: '';
+  speak: none;
+}
+
+hr {
+  background-color: #148297;
+  border: 0;
+  color: #148297;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+kbd {
+    border: solid 1px;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    padding: 0 .25em;
+  }
+
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.mb0 { margin-bottom: 0; }
+
+.relative { position: relative; }
+
+.mod--hidden { overflow: hidden; }
+
+
+
+/*.carrousel__content[aria-hidden=true] {
+  white-space: normal;
+}*/
+
+/* ------------------ example styles ------------------ */
+.relative { position: relative; }
+.mod--hidden { overflow: hidden; }
+.pb1 { padding-bottom: 1em; }
+
+.news-carrousel__container {
+  white-space: nowrap;
+}
+.news-carrousel__control__list {
+  position: absolute;
+  list-style-type: none;
+  top: 100%;
+  right: 0;
+  left: 0;
+  margin-top: -0.5em;
+  padding-left: 0;
+  text-align: center;
+}
+.news-carrousel__control__list__item {
+  display: inline-block;
+  margin: 0 .5em;
+}
+.news-carrousel__control__list__link {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border: 1px solid #148297;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.news-carrousel__button-container {
+  position: absolute;
+}
+.news-carrousel__button__previous {
+  top: 50%;
+  margin-top: -18px;
+  left: 0;
+  margin-left: -35px;
+}
+.news-carrousel__button__next {
+  top: 50%;
+  margin-top: -18px;
+  right: 0;
+  margin-right: -35px;
+}
+.news-carrousel__button__button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* ------------------ transition slide ------------------ */
+.slide .carrousel__content {
+    display: inline-block;
+    vertical-align: top;
+    visibility: visible;
+    width: 100%;
+    position: relative;
+    -webkit-transition: visibility 0s ease, transform .5s ease-in;
+    -webkit-transition: visibility 0s ease, -webkit-transform .5s ease-in;
+    transition: visibility 0s ease, -webkit-transform .5s ease-in;
+    transition: visibility 0s ease, transform .5s ease-in;
+    transition: visibility 0s ease, transform .5s ease-in, -webkit-transform .5s ease-in;
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
+    white-space: normal;
+  }
+
+  [data-carrousel-active-slide="1"].slide > .carrousel__content {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  [data-carrousel-active-slide="2"].slide > .carrousel__content {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  [data-carrousel-active-slide="3"].slide > .carrousel__content {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  [data-carrousel-active-slide="4"].slide > .carrousel__content {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  [data-carrousel-active-slide="5"].slide > .carrousel__content {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
+  }
+  [data-carrousel-active-slide="6"].slide > .carrousel__content {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+  [data-carrousel-active-slide="7"].slide > .carrousel__content {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%);
+  }
+  [data-carrousel-active-slide="8"].slide > .carrousel__content {
+    -webkit-transform: translateX(-700%);
+            transform: translateX(-700%);
+  }
+  [data-carrousel-active-slide="9"].slide > .carrousel__content {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%);
+  }
+
+  [data-carrousel-active-slide].slide > [aria-hidden="true"].carrousel__content {
+    visibility: hidden;
+    -webkit-transition-delay: .5s, 0s;
+            transition-delay: .5s, 0s;
+  }
+
+
+/* ------------------ transition fade ------------------ */
+.fade .carrousel__content {
+    -webkit-animation: fadein 1s;
+    animation:         fadein 1s;
+    white-space: normal;
+}
+.fade .carrousel__content[aria-hidden=true] {
+    -webkit-animation: fadeout 1s;
+    animation:         fadeout 1s;
+}
+.fade .carrousel__content[aria-hidden=true] {
+    display: none;
+}
+
+@-webkit-keyframes fadeout {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+@keyframes fadeout {
+    0%   { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+    100% { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+}
+
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+@keyframes fadein {
+    0%   { opacity: 0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    100% { opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+}
+
+
+
+/* ------------------ transition none ------------------ */
+.none .carrousel__content {
+  white-space: normal;
+}
+.none .carrousel__content[aria-hidden=true] {
+  display: none;
+}
+
+
+/* ------------------ State rules ------------------ */
+.news-carrousel__control__list__link:focus,
+.news-carrousel__control__list__link:hover,
+.news-carrousel__control__list__link:active,
+.news-carrousel__control__list__link[aria-selected=true] {
+  background: #148297;
+}
+.news-carrousel__control__list__link:focus,
+.news-carrousel__control__list__link:hover,
+.news-carrousel__control__list__link:active {
+  outline: 2px dotted #4d287f;
+}
+
+
+
+
+
+@media (max-width: 66em) {
+  body {
+   padding: 0 2em;
+  }
+}
