@@ -175,11 +175,7 @@
         let tabindexValue = (isSelected ? '0' : '-1');
         let numberElement = config.numberElement;
 
-        return `<li class="${CARROUSEL_CONTROL_LIST_ITEM} ${itemClass}" ${ATTR_ROLE}="${ATTR_PRESENTATION}">
-                  <a class="${CARROUSEL_CONTROL_LIST_LINK} ${linkClass}" id="${id}" ${ATTR_ROLE}="${ATTR_TAB}" ${ATTR_CONTROL}="${controlId}" ${ATTR_SELECTED}="${isSelected}" ${CARROUSEL_DATA_ELEMENT_NUMBER}="${numberElement}" tabindex="${tabindexValue}">
-                  <span class="${spanClass}">${itemText}</span>
-                  </a>
-                </li>`;
+        return `<li class="${CARROUSEL_CONTROL_LIST_ITEM} ${itemClass}" ${ATTR_ROLE}="${ATTR_PRESENTATION}"><a class="${CARROUSEL_CONTROL_LIST_LINK} ${linkClass}" id="${id}" ${ATTR_ROLE}="${ATTR_TAB}" ${ATTR_CONTROL}="${controlId}" ${ATTR_SELECTED}="${isSelected}" ${CARROUSEL_DATA_ELEMENT_NUMBER}="${numberElement}" tabindex="${tabindexValue}"><span class="${spanClass}">${itemText}</span></a></li>`;
     };
 
     const selectCarrouselElement = config => {
