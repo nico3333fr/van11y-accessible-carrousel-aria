@@ -15,8 +15,8 @@ La page existe aussi en français : https://van11y.net/fr/carrousel-accessible/
 Here is the starting code needed. Add the script, needed CSS, style it as you want, and it is ok.
 
 ```html
-<div class="js-carrousel relative">      
-  <div class="js-carrousel__container mod--hidden" 
+<div class="js-carrousel relative">
+  <div class="js-carrousel__container mod--hidden"
    data-carrousel-btn-previous-img="./left.svg"
    data-carrousel-btn-next-img="./right.svg"
    data-carrousel-btn-previous-text="Show previous content"
@@ -25,7 +25,7 @@ Here is the starting code needed. Add the script, needed CSS, style it as you wa
    data-carrousel-span-text-class="invisible"
    data-carrousel-transition="slide"
    data-carrousel-existing-hx="h3">
-          
+
     <div class="js-carrousel__content">
       <h3>A first panel</h3>
       <p>Here the content.</p>
@@ -38,7 +38,7 @@ Here is the starting code needed. Add the script, needed CSS, style it as you wa
       <h3>A third panel</h3>
       <p>Here the content.</p>
     </div>
-          
+
   </div>
 </div>
 ```
@@ -53,7 +53,9 @@ The plugin will do all the job on the fly:
 
 The script is launched when the page is loaded. If you need to execute it on AJAX-inserted content, you may use for example on `<div id="newContent">your carrousel source</div>`:
 
-```van11yAccessibleCarrouselAria(document.getElementById('newContent'));```
+```van11yAccessibleCarrouselAria(document.getElementById('newContent')[, addListeners]);```
+
+<code>addListeners</code> is a facultative boolean (by default set to <code>true</code>) to add carrousel listeners (should be set up only the first time in most of the cases).
 
 ## How to use it
 
@@ -78,7 +80,7 @@ __List of all data-attributes__
 - `data-carrousel-transition`: the value of this attribute will be added as a class on the carrousel container tag `div class="js-carrousel__container"`. And CSS will do the magic to animate it. See three examples of transitions in the demo (“slide”, “fade” and “none”).
 - `data-carrousel-active-slide`: put here the number of the slide you want to display by default for your carrousel.
 
-	
+
 ## How to create different styles?
 
 In this example page, I’ve used `data-carrousel-prefix-class="news"`, so all the generated classes will start with `.news-carrousel`.
@@ -169,7 +171,7 @@ In this example page, I’ve used `data-carrousel-prefix-class="news"`, so all t
 
 ## How to style transitions (nicely)
 
-Here are 3 examples of transitions: 
+Here are 3 examples of transitions:
 
 ```css
 /* ------------------ transition slide ------------------ */
