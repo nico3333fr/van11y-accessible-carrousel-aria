@@ -301,7 +301,7 @@
                             hx = carrouselContent.querySelector(carrouselExistingHx);
                             if (hx) {
                                 setAttributes(hx, {
-                                    'tabindex': '0'
+                                    'tabindex': '-1'
                                 });
                                 textHx = hx.textContent;
                             }
@@ -312,7 +312,7 @@
                             // insert hx
                             let hxToInsert = document.createElement(carrouselHx);
                             setAttributes(hxToInsert, {
-                                'tabindex': '0'
+                                'tabindex': '-1'
                             });
                             hxToInsert.innerHTML = textHx;
                             addClass(hxToInsert, VISUALLY_HIDDEN_CLASS);
