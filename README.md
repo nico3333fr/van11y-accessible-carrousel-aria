@@ -79,6 +79,7 @@ __List of all data-attributes__
 - `data-carrousel-span-text-class`: in the `ol` list, the text will be wrapped into a `span` with this class. Example, `data-carrousel-span-text-class="yipikai"` will provide `<a … role="tab"><span class="yipikai">A robust base</span></a>`
 - `data-carrousel-transition`: the value of this attribute will be added as a class on the carrousel container tag `div class="js-carrousel__container"`. And CSS will do the magic to animate it. See three examples of transitions in the demo (“slide”, “fade” and “none”).
 - `data-carrousel-active-slide`: put here the number of the slide you want to display by default for your carrousel.
+- `data-carousel-hide-arrows-focus`: will make next/prev buttons not focusable for keyboard users and not visible for speech synthesis.
 
 
 ## How to create different styles?

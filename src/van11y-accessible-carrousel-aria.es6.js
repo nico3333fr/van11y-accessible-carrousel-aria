@@ -50,6 +50,7 @@
     const CARROUSEL_DATA_EXISTING_HX = 'data-carrousel-existing-hx';
     const CARROUSEL_DATA_HX = 'data-carrousel-hx';
     const CARROUSEL_DATA_SPAN_TEXT = 'data-carrousel-span-text';
+    const CARROUSEL_DATA_HIDE_ARROWS_FOCUS = 'data-carousel-hide-arrows-focus';
 
     const VISUALLY_HIDDEN_CLASS = 'invisible';
 
@@ -244,6 +245,9 @@
                 // Class for span in controllers
                 let carrouselSpanTextClass = carrouselContainer.hasAttribute(CARROUSEL_DATA_SPAN_TEXT_CLASS) === true ? carrouselContainer.getAttribute(CARROUSEL_DATA_SPAN_TEXT_CLASS) : VISUALLY_HIDDEN_CLASS;
 
+                // hide buttons from focus
+                let carrouselHideArrowsFocus = carrouselContainer.hasAttribute(CARROUSEL_DATA_HIDE_ARROWS_FOCUS) === true ;
+
                 // Next/prev buttons
                 let carrouselButtonPreviousText = carrouselContainer.hasAttribute(CARROUSEL_DATA_BTN_PREVIOUS_TEXT) === true ? carrouselContainer.getAttribute(CARROUSEL_DATA_BTN_PREVIOUS_TEXT) : '';
                 let carrouselButtonPreviousTextFlat = doc.createElement("SPAN");
@@ -351,6 +355,12 @@
                         'id': CARROUSEL_BUTTON_PREVIOUS + '_' + iLisible,
                         'title': carrouselButtonPreviousText
                     });
+                    if ( carrouselHideArrowsFocus ) {
+                        setAttributes(carrouselButtonBefore, {
+                            [ATTR_HIDDEN]: true,
+                            'tabindex': '-1'
+                        });
+                    }
                     addClass(carrouselButtonBefore, CARROUSEL_BUTTON_PREVIOUS);
                     addClass(carrouselButtonBefore, prefixClassName + CARROUSEL_BUTTON_CLASS_SUFFIX);
 
@@ -386,6 +396,12 @@
                         'id': CARROUSEL_BUTTON_NEXT + '_' + iLisible,
                         'title': carrouselButtonNextText
                     });
+                    if ( carrouselHideArrowsFocus ) {
+                        setAttributes(carrouselButtonNext, {
+                            [ATTR_HIDDEN]: true,
+                            'tabindex': '-1'
+                        });
+                    }
                     addClass(carrouselButtonNext, CARROUSEL_BUTTON_NEXT);
                     addClass(carrouselButtonNext, prefixClassName + CARROUSEL_BUTTON_CLASS_SUFFIX);
 
